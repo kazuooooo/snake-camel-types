@@ -4,7 +4,9 @@ Utility type definition convert snake_case🐍 ←→ camelCase🐪
 ## Installation
 
 ```sh
-npm install snake-camel-types
+npm install snake-camel-types --save-dev
+or
+yarn add -D snake-camel-types
 ```
 
 ## Usage
@@ -12,13 +14,15 @@ npm install snake-camel-types
 ### SnakeToCamelCase(🐍→🐪)
 Convert single key from snake_case to camelCase
 ```typescript
+import { SnakeToCamelCase } from "snake-camel-types"
 type CamelUserId = SnakeToCamelCase<'user_id'>
 // => 'userId'
 ```
 
 ### SnakeToCamel(🐍→🐪)
 Convert snake_case key object to camelCase key object
-```
+```typescript
+import { SnakeToCamel } from "snake-camel-types"
 type SnakeUser = {
   user_id: string,
   birth_year: number
@@ -36,11 +40,13 @@ type CamelUser = SnakeToCamel<SnakeUser>
 ### CamelToSnakeCase(🐪→🐍)
 Convert single key from camelCase to snake_case
 ```typescript
+import { CamelToSnakeCase } from "snake-camel-types"
 type SnakeUserId = CamelToSnakeCase<'userId'>
 // => 'user_id'
 ```
 ### CamelToSnake(🐪→🐍)
 ```typescript
+import { CamelToSnake } from "snake-camel-types"
 type CamelUser = {
   userId: string,
   birthYear: number
