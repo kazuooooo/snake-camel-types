@@ -5,5 +5,8 @@
   "types": "index.d.ts",
   "repository": "https://github.com/kazuooooo/snake-camel-types.git",
   "author": "kazuwombat <matsumotokazuya7@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "peerDependencies": {
+    "typescript": ">=4.1"
+  }
 }
